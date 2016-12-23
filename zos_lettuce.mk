@@ -14,13 +14,15 @@
 
 $(call inherit-product, device/yu/lettuce/full_lettuce.mk)
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+# Inherit some common ZOS stuff.
+$(call inherit-product, vendor/zos/common.mk)
 
 # Must define platform variant before including any common things
 TARGET_BOARD_PLATFORM_VARIANT := msm8916
 
-PRODUCT_NAME := cm_lettuce
+PRODUCT_BUILD_PROP_OVERRIDES += DEVICE_MAINTAINERS="Sai Vishal (DroidThug)"
+
+PRODUCT_NAME := zos_lettuce
 BOARD_VENDOR := yu
 PRODUCT_DEVICE := lettuce
 
